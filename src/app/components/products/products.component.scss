@@ -1,0 +1,160 @@
+
+// Custom styles
+.box {
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    background-color: #ffffff;
+    height: 100%;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.card-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.card-image figure {
+    margin: 0;
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.card-image img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 150px; /* Limit the height to maintain aspect ratio */
+    object-fit: contain; /* Ensures the image is not cropped */
+    border-radius: 8px; /* Rounded corners for image */
+}
+
+.card-content .description {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 1rem;
+    max-width: 100%;
+}
+
+.card-footer {
+    margin-top: auto; /* Push footer to the bottom */
+}
+
+.button {
+    border-radius: 4px; /* Rounded corners for buttons */
+    font-weight: bold; /* Bold text for emphasis */
+}
+
+.button.is-danger {
+    background-color: #363636; /* Red color for danger button */
+    color: #ffffff; /* White text for contrast */
+}
+
+.button.is-danger:hover {
+    background-color: #d32f2f; /* Darker red color on hover */
+    color: #ffffff; /* Ensure text remains white on hover */
+}
+
+.columns.is-multiline {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+}
+
+.column {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+}
+
+@media (max-width: 768px) {
+    .column {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+}
+
+// Darker text content
+.has-text-dark {
+    color: #363636; /* Darker text color */
+}
+
+// Additional styles for price alignment
+.level {
+    margin-top: 0.5rem;
+}
+
+.level-left,
+.level-right {
+    flex-basis: auto;
+    flex-grow: 1;
+}
+
+.level-left strong {
+    font-size: 1rem;
+}
+
+.level-right span {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+// Reduce font size for title and description
+.title.is-6 {
+    font-size: 1.125rem;
+}
+
+.description {
+    font-size: 0.875rem;
+}
+
+// Filter items
+.filter-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.filter-item figure {
+    margin: 0;
+}
+
+.filter-item h6 {
+    margin-top: 0.5rem;
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+    .column.is-one-quarter-mobile {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .column.is-one-fifth-tablet {
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+
+    .column.is-one-fifth-desktop {
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+}

@@ -1,0 +1,231 @@
+// Import Bulma
+@import "bulma/bulma";
+
+// Custom styles
+.product-image {
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+}
+
+.empty-cart {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.empty-cart .image {
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+.table th,
+.table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.button {
+    margin-top: 10px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .table thead {
+        display: none; /* Hide table headers on small screens */
+    }
+
+    .table,
+    .table tbody,
+    .table tr,
+    .table td {
+        display: block;
+        width: 100%;
+    }
+
+    .table td {
+        position: relative;
+        padding-left: 50%;
+        text-align: right;
+        &:before {
+            content: attr(data-label);
+            position: absolute;
+            left: 0;
+            width: 50%;
+            padding-left: 10px;
+            font-weight: bold;
+            text-align: left;
+        }
+    }
+
+    .table td:last-child {
+        border-bottom: 0;
+    }
+}
+
+// Additional spacing
+.box {
+    margin-bottom: 2rem;
+}
+
+.empty-cart .title {
+    margin-bottom: 1rem;
+}
+
+.empty-cart .subtitle {
+    margin-bottom: 2rem;
+}
+
+.button {
+    margin-bottom: 1rem;
+}
+
+.table td {
+    padding: 1rem;
+}
+
+.table th {
+    padding: 1rem;
+}
+
+// Improved color scheme
+.table {
+    background-color: #f9f9f9; /* Light gray background */
+}
+
+.table th {
+    background-color: #e9ecef; /* Light blue background */
+    color: #363636; /* Darker text color */
+}
+
+.button.is-danger {
+    background-color: #f44336; /* Red color for danger button */
+    color: #ffffff; /* White text for contrast */
+    border: 1px solid #f44336; /* Matching border color */
+}
+
+.button.is-primary {
+    background-color: #3273dc; /* Blue color for primary button */
+    color: #ffffff; /* White text for contrast */
+    border: 1px solid #3273dc; /* Matching border color */
+}
+
+.is-size-5 {
+    color: #363636; /* Darker text color for grand total */
+}
+
+// Additional improvements for mobile devices
+@media screen and (max-width: 768px) {
+    .table td {
+        font-size: 1.2rem; /* Increase font size for better readability */
+    }
+
+    .table td .product-image {
+        max-width: 100px; /* Reduce image size for better fit */
+    }
+
+    .button {
+        font-size: 1.2rem; /* Increase button text size */
+        padding: 0.75rem 1.5rem; /* Increase button padding */
+    }
+
+    .empty-cart .title {
+        font-size: 1.5rem; /* Increase title font size */
+    }
+
+    .empty-cart .subtitle {
+        font-size: 1.2rem; /* Increase subtitle font size */
+    }
+}
+
+// Focus styles for accessibility
+.button:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+    box-shadow: none;
+}
+
+// Ensure sufficient color contrast for text
+.table td,
+.table th {
+    color: #363636; /* Darker text color */
+}
+
+// Ensure touch-friendly buttons
+.button {
+    min-width: 100px; /* Minimum width for touch targets */
+}
+
+// Ensure skip links are visible to screen readers
+a.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    background: #3273dc;
+    color: #fff;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0 0 4px 0;
+    transition: top 0.3s ease-in-out;
+}
+
+a.skip-link:focus {
+    top: 0;
+}
+
+// Additional styles for consistency
+body {
+    background-color: #f5f5f5; /* Light gray background */
+    color: #363636; /* Darker text color */
+}
+
+.container {
+    margin-top: 2rem;
+}
+
+.box {
+    background-color: #ffffff; /* White background for box */
+    border: 1px solid #e9ecef; /* Light blue border */
+}
+
+.table {
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    border: 1px solid #e9ecef; /* Light blue border */
+}
+
+.button {
+    border: 1px solid transparent;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.button.is-danger {
+    border-color: #f44336; /* Red border */
+}
+
+.button.is-primary {
+    border-color: #3273dc; /* Blue border */
+}
+
+.is-size-5 {
+    margin-top: 1rem; /* Add some space above the grand total */
+}
+
+// Ensure skip links are visible to screen readers
+a.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    background: #3273dc;
+    color: #fff;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0 0 4px 0;
+    transition: top 0.3s ease-in-out;
+}
+
+a.skip-link:focus {
+    top: 0;
+}

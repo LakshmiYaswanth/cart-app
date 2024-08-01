@@ -1,0 +1,23 @@
+<header>
+    <nav class="navbar is-link">
+        <div class="navbar-brand">
+            <a class="navbar-item" routerLink="/products">
+                <i class="fa-brands fa-angular" style="font-size: 40px;"></i>
+                <span class="title is-4 ml-2">LetCode Shopping</span>
+            </a>
+            <div class="navbar-burger burger" data-target="navbarMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div id="navbarMenu" class="navbar-menu">
+            <div class="navbar-end">
+                <a class="navbar-item button is-link has-text-white" routerLink="cart">
+                    <i class="fas fa-cart-plus" style="font-size: 30px;"></i>
+                    <span class="tag is-primary is-small ml-2">{{totalItem}}</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+</header>

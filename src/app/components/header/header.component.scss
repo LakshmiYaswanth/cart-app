@@ -1,0 +1,55 @@
+
+// Custom styles
+.navbar {
+    background-color: #363636; /* Red color for the navbar */
+}
+
+
+.navbar-brand {
+    align-items: center;
+}
+
+.navbar-item {
+    color: #ffffff; /* White text for contrast */
+    font-size: 1.5rem; /* Increase font size for better visibility */
+}
+
+.title.is-4 {
+    font-size: 2rem; /* Adjust title font size */
+}
+
+.navbar-burger {
+    color: #ffffff; /* White burger icon for contrast */
+}
+
+.navbar-menu {
+    background-color: #363636; /* Ensure menu background matches navbar */
+}
+
+.navbar-end {
+    margin-right: 1rem; /* Add some space to the right */
+}
+
+.navbar-item.button {
+    padding: 0.75rem 1.5rem; /* Adjust button padding */
+}
+
+.fas.fa-cart-plus {
+    margin-right: 0.5rem; /* Add space between icon and text */
+}
+
+.tag.is-primary {
+    background-color: #ffffff; /* Primary color for the tag */
+    color: #363636; /* White text for contrast */
+}
+
+// Responsive styles
+@media (max-width: 768px) {
+    .navbar-item {
+        font-size: 1.25rem; /* Reduce font size for smaller screens */
+    }
+
+    .title.is-4 {
+        font-size: 1.75rem; /* Adjust title font size for smaller screens */
+    }
+}

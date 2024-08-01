@@ -1,0 +1,77 @@
+<div class="container">
+    <div class="columns is-mobile is-multiline">
+        <!-- Category Filters -->
+        <div class="column is-one-quarter-mobile is-one-fifth-tablet is-one-fifth-desktop">
+            <div class="box has-text-centered">
+                <a (click)="filter('')" class="filter-item">
+                    <figure class="image is-64x64 mx-auto">
+                        <img src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100" alt="All products">
+                    </figure>
+                    <h6 class="title is-6 mt-2 has-text-dark">All products</h6>
+                </a>
+            </div>
+        </div>
+        <div class="column is-one-quarter-mobile is-one-fifth-tablet is-one-fifth-desktop">
+            <div class="box has-text-centered">
+                <a (click)="filter('electronics')" class="filter-item">
+                    <figure class="image is-64x64 mx-auto">
+                        <img src="https://rukminim1.flixcart.com/flap/128/128/image/69c6589653afdb9a.png?q=100" alt="Electronics">
+                    </figure>
+                    <h6 class="title is-6 mt-2 has-text-dark">Electronics</h6>
+                </a>
+            </div>
+        </div>
+        <div class="column is-one-quarter-mobile is-one-fifth-tablet is-one-fifth-desktop">
+            <div class="box has-text-centered">
+                <a (click)="filter('fashion')" class="filter-item">
+                    <figure class="image is-64x64 mx-auto">
+                        <img src="https://rukminim1.flixcart.com/flap/128/128/image/82b3ca5fb2301045.png?q=100" alt="Fashion">
+                    </figure>
+                    <h6 class="title is-6 mt-2 has-text-dark">Fashion</h6>
+                </a>
+            </div>
+        </div>
+        <div class="column is-one-quarter-mobile is-one-fifth-tablet is-one-fifth-desktop">
+            <div class="box has-text-centered">
+                <a (click)="filter('jewelery')" class="filter-item">
+                    <figure class="image is-64x64 mx-auto">
+                        <img src="https://rukminim1.flixcart.com/image/580/696/kkh6zrk0/jewellery-set/o/w/z/gt-ns-862-matushri-art-original-imafzt9teacakjyn.jpeg?q=50" alt="Jewelry">
+                    </figure>
+                    <h6 class="title is-6 mt-2 has-text-dark">Jewelry</h6>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="columns is-multiline">
+        <ng-container *ngFor="let item of filterCategory | filter:searchKey:'title'">
+            <div class="column is-half-mobile is-one-third-tablet is-one-quarter-desktop">
+                <div class="card">
+                    <div class="card-image">
+                        <figure class="image is-16by9">
+                            <img src="{{item.image}}" alt="{{item.title}}">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <div class="content">
+                            <h5 class="title is-6 has-text-dark">{{item.title}}</h5>
+                            <p class="description has-text-dark" title="{{item.description}}">{{item.description}}</p>
+                            <div class="level">
+                                <div class="level-left">
+                                    <strong class="has-text-dark">Price:</strong>
+                                </div>
+                                <div class="level-right">
+                                    <span class="has-text-dark">${{item.price}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <footer class="card-footer">
+                        <button class="button is-danger is-fullwidth" (click)="addToCart(item)">Add to cart</button>
+                    </footer>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>

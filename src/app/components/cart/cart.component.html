@@ -1,0 +1,64 @@
+<ng-container *ngIf="products.length != 0">
+    <div class="container">
+        <div class="box">
+            <table class="table is-fullwidth is-striped is-bordered is-hoverable" aria-label="Cart Items">
+                <thead>
+                    <tr>
+                        <th scope="col">Sr.No</th>
+                        <th scope="col">Product Name</th>
+                        <th scope="col">Product Image</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Total</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of products; let i = index">
+                        <th scope="row">{{i+1}}</th>
+                        <td>{{item.title}}</td>
+                        <td>
+                            <figure class="image is-128x128">
+                                <img class="product-image" src="{{item.image}}" alt="Product Image">
+                            </figure>
+                        </td>
+                        <td>{{item.description}}</td>
+                        <td>${{item.price}}</td>
+                        <td>{{item.quantity}}</td>
+                        <td>${{item.total}}</td>
+                        <td>
+                            <button (click)="removeItem(item)" class="button is-danger is-small" aria-label="Remove item">
+                                <span class="icon"><i class="fas fa-trash"></i></span>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="8" class="has-text-centered">
+                            <button (click)="emptyCart()" class="button is-danger is-fullwidth mb-2" aria-label="Empty Cart">Empty Cart</button>
+                            <a routerLink="/products" class="button is-primary is-fullwidth mb-2" aria-label="Shop more">Shop more</a>
+                            <button class="button is-success is-fullwidth" aria-label="Check out">Check out</button>
+                            <strong class="is-size-5">Grand Total : $ {{grandTotal}}</strong>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</ng-container>
+
+<ng-container *ngIf="products.length == 0">
+    <div class="container">
+        <div class="box">
+            <h5 class="title is-4">My Cart</h5>
+        </div>
+        <div class="empty-cart">
+            <figure class="image is-250x250">
+                <img src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100" alt="Empty Cart">
+            </figure>
+            <h4 class="title is-4">Your cart is empty</h4>
+            <h6 class="subtitle is-6">Add item to it now</h6>
+            <a routerLink="/products" class="button is-primary" aria-label="Shop now">Shop now</a>
+        </div>
+    </div>
+</ng-container>
